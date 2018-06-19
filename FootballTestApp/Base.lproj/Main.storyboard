@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="-617" y="45"/>
         </scene>
-        <!--Players List Table View Controller-->
+        <!--Title-->
         <scene sceneID="7fh-zp-0Oa">
             <objects>
                 <tableViewController id="tjX-cl-qGW" customClass="PlayersListTableViewController" customModule="FootballTestApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,6 +113,13 @@
                             <outlet property="delegate" destination="tjX-cl-qGW" id="T8n-7E-aZW"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="qTK-6b-BY8">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="Z6P-B6-0cK">
+                            <connections>
+                                <action selector="EditButtonClicked:" destination="tjX-cl-qGW" id="L1l-n8-4Ug"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AuF-Z1-S2o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

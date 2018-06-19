@@ -17,19 +17,19 @@ enum playerStatus: String {
         return self.rawValue
     }
     
-    static func random() -> String {
+    static func random() -> playerStatus {
         let types = [self.general, self.forReplace, self.reserve]
         let index = Int(arc4random_uniform(UInt32(types.count)))
-        return types[index].type()
+        return types[index]
     }
 }
 
 class Player: NSObject {
-    init(name: String, status: String) {
+    init(name: String, status: playerStatus) {
         self.name = name
         self.status = status
     }
 
     var name: String
-    var status: String
+    var status: playerStatus
 }

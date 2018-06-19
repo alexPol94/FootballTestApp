@@ -14,5 +14,10 @@ class Team: NSObject {
         self.name = name
     }
     var name: String
-    var players = [Player]()
+    var players: [Player] {
+        return genPlayers + playersForReplace + reservePlayers
+    }
+    var genPlayers = [Player]()
+    var playersForReplace = [Player]()
+    var reservePlayers = [Player]()
 }
